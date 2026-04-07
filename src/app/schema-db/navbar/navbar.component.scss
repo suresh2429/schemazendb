@@ -1,6 +1,6 @@
 .bg-light {
   background-color: white !important;
-  height: 75px;
+  min-height: 75px;
 }
 nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,4 +15,38 @@ nav {
 .logo-img {
   height: 66px;
   border-radius: 6px;
+}
+
+.logo-img {
+  height: clamp(40px, 6vw, 66px);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background: #1c1c3c;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* makes it visible on dark bg */
+}
+
+body {
+  padding-top: 80px;
 }

@@ -20,7 +20,7 @@
 /* BLOG GRID */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
@@ -63,4 +63,41 @@
 .btn:hover {
   background: #00fdff !important;
   color: #1e293b !important;
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 50px 15px;
+  }
+}
+
+.blog-card h3 {
+  font-size: clamp(18px, 3vw, 22px);
+}
+
+.blog-card p {
+  font-size: clamp(13px, 2.5vw, 14px);
+}
+
+.blog-image {
+  width: 100%;
+  height: clamp(140px, 25vw, 180px);
+}
+
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 70px 15px;
+  }
+}
+
+.blog-hero h1 {
+  font-size: clamp(24px, 5vw, 42px);
+}
+
+.blog-hero p {
+  font-size: clamp(14px, 2.5vw, 18px);
 }

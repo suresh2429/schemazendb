@@ -1,7 +1,7 @@
 <nav
   class="navbar navbar-light bg-light navbar-expand-md fixed-top navbar-top p-0"
 >
-  <div class="container ms-2">
+  <div class="container-fluid px-3">
     <a class="navbar-brand" href="#">
       <img src="assets/schemaDB_logo.png" alt="logo" class="logo-img" />
     </a>
@@ -9,8 +9,8 @@
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
+      data-bs-target="#zenDBNav"
+      aria-controls="zenDBNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
@@ -24,7 +24,7 @@
             routerLink="/schema-db/services"
             #servicesPopover="ngbPopover"
             [ngbPopover]="servicesContent"
-            triggers="manual"
+            triggers="mouseenter:mouseleave click"
             popoverClass="custom-services-popover"
             container="body"
             (mouseenter)="openPopover(servicesPopover)"
@@ -38,7 +38,7 @@
             routerLink="/schema-db/about"
             #aboutUsPopover="ngbPopover"
             [ngbPopover]="aboutUsContent"
-            triggers="manual"
+           triggers="mouseenter:mouseleave click"
             popoverClass="custom-about-popover"
             container="body"
             (mouseenter)="openPopover(aboutUsPopover)"
@@ -52,7 +52,7 @@
             routerLink="/schema-db/explore"
             #popover="ngbPopover"
             [ngbPopover]="exploreContent"
-            triggers="manual"
+            triggers="mouseenter:mouseleave click"
             popoverClass="custom-popover"
             container="body"
             (mouseenter)="openPopover(popover)"
@@ -115,7 +115,7 @@
           *ngFor="let service of services"
           (mouseenter)="setActiveService(service)"
         >
-          {{ service.name }}
+          <a routerLink="/schema-db/{{ service.id }}" class="text-dark p-0">{{ service.name }}</a>
         </li>
       </ul>
     </div>

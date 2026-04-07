@@ -1,3 +1,24 @@
 .footer-section {
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 0 15px;
+  }
+}
+
+.footer-lists p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer-lists {
+    text-align: center;
+  }
+}
+
+.footer-lists > div {
+  margin-bottom: 20px;
+}

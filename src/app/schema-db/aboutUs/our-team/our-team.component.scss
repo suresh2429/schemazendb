@@ -32,6 +32,19 @@
   transition: transform 0.3s ease;
 }
 
+.team-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.desc {
+  font-size: clamp(13px, 2.5vw, 14px);
+}
+
 .team-card:hover {
   transform: translateY(-6px);
 }
@@ -54,3 +67,34 @@
   font-size: 14px;
   color: #475569;
 }
+
+.avatar {
+  width: clamp(70px, 10vw, 100px);
+  height: clamp(70px, 10vw, 100px);
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    padding: 20px;
+  }
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .team-hero {
+    padding: 70px 15px;
+  }
+}
+.team-hero h1 {
+  font-size: clamp(24px, 5vw, 42px);
+}
+
+.team-hero p {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+

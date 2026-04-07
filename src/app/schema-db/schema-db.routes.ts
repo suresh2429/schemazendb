@@ -54,13 +54,13 @@ export const schemaDBRoutes: Routes = [
         (m) => m.ContactUsComponent,
       ),
   },
-  {
-    path: 'it-contract-supply',
-    loadComponent: () =>
-      import('./it-support/it-support.component').then(
-        (m) => m.ItSupportComponent,
-      ),
-  },
+  // {
+  //   path: 'it-contract-supply',
+  //   loadComponent: () =>
+  //     import('./it-support/it-support.component').then(
+  //       (m) => m.ItSupportComponent,
+  //     ),
+  // },
   {
   path: 'service/db-support',
   loadComponent: () =>
@@ -90,6 +90,13 @@ export const schemaDBRoutes: Routes = [
   loadComponent: () =>
     import('./services-home/it-contract-supply/it-contract-supply.component')
       .then(m => m.ItContractSupplyComponent)
+},
+
+{
+  path: 'service/db-trainings',
+  loadComponent: () =>
+    import('./services-home/db-trainings/db-trainings.component')
+      .then(m => m.DbTrainingsComponent)
 },
 
 ];

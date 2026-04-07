@@ -55,31 +55,37 @@ export class NavbarComponent {
 
   services = [
     {
+      id:'service/db-support',
       name: 'Database Support',
       description: '24/7 monitoring, troubleshooting, and database health.',
       image: 'assets/home_page_img.png',
     },
     {
+        id:'service/consulting',
       name: 'Consulting',
       description: 'Architecture design and performance consulting.',
       image: 'assets/home_page_img.png',
     },
     {
+      id:'service/cloud-db',
       name: 'Cloud Database Management',
       description: 'AWS, Azure, GCP database management.',
       image: 'assets/home_page_img.png',
     },
     {
+      id:'service/db-migration',
       name: 'Database Migrations',
       description: 'Seamless migration with zero downtime.',
       image: 'assets/home_page_img.png',
     },
     {
+      id:'service/db-trainings',
       name: 'Database Trainings',
       description: 'Seamless migration with zero downtime.',
       image: 'assets/home_page_img.png',
     },
     {
+      id:'service/it-contract-supply',
       name: 'IT Contract Supply',
       description: 'Seamless migration with zero downtime.',
       image: 'assets/home_page_img.png',

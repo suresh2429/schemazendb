@@ -141,3 +141,50 @@ a:hover {
   cursor: pointer;
   border-bottom: 2px solid #00fdff !important;
 }
+
+.hero h1 {
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+.hero p {
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* IMPORTANT */
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 50px 15px;
+  }
+
+  .hero {
+    padding: 80px 15px;
+  }
+}
+
+.section-title {
+  font-size: clamp(22px, 4vw, 32px);
+}
+
+.stat h2 {
+  font-size: clamp(24px, 5vw, 40px);
+}
+
+@media (max-width: 768px) {
+  .about-card,
+  .mv-card,
+  .why-card {
+    padding: 20px;
+  }
+}

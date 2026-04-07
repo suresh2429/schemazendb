@@ -21,6 +21,7 @@ export class ServicesHomeComponent {
       icon: 'bi-database',
     },
     {
+      id:'db-trainings',
       title: 'Database Trainings',
       description:
         'End-to-end database administration handled by certified experts.',
