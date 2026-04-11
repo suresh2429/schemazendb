@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-consulting',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './consulting.component.html',
   styleUrl: './consulting.component.scss'
 })

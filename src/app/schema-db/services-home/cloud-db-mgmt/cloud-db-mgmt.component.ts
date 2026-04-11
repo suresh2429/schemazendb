@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cloud-db-mgmt',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './cloud-db-mgmt.component.html',
   styleUrl: './cloud-db-mgmt.component.scss'
 })

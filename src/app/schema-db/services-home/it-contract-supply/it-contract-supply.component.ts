@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-it-contract-supply',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './it-contract-supply.component.html',
   styleUrl: './it-contract-supply.component.scss'
 })

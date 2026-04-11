@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-db-migration',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './db-migration.component.html',
   styleUrl: './db-migration.component.scss'
 })

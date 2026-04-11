@@ -6,11 +6,12 @@ import {
   NgbNavModule,
 } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [NavbarComponent, NgbNavModule, NgbCarouselModule, CommonModule],
+  imports: [NavbarComponent, NgbNavModule, NgbCarouselModule, CommonModule,RouterModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
   providers: [NgbCarouselConfig],

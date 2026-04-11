@@ -31,15 +31,15 @@ export const schemaDBRoutes: Routes = [
       ),
   },
   {
-    path: 'explore',
+    path: '',
     children: [
-      {
-        path: '',
-        loadComponent: () =>
-          import('./explore/explore-more/explore-more.component').then(
-            (m) => m.ExploreMoreComponent,
-          ),
-      },
+      // {
+      //   path: '',
+      //   loadComponent: () =>
+      //     import('./explore/explore-more/explore-more.component').then(
+      //       (m) => m.ExploreMoreComponent,
+      //     ),
+      // },
       {
         path: 'blog',
         loadComponent: () =>

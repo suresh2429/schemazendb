@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-db-support',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './db-support.component.html',
   styleUrl: './db-support.component.scss'
 })

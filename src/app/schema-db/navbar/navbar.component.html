@@ -5,18 +5,14 @@
     <a class="navbar-brand" href="#">
       <img src="assets/schemaDB_logo.png" alt="logo" class="logo-img" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#zenDBNav"
-      aria-controls="zenDBNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+  <button
+  class="navbar-toggler"
+  type="button"
+  (click)="isMenuOpen = !isMenuOpen"
+>
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="zenDBNav">
+    <div class="collapse navbar-collapse" id="zenDBNav" [ngbCollapse]="!isMenuOpen">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a
@@ -24,11 +20,12 @@
             routerLink="/schema-db/services"
             #servicesPopover="ngbPopover"
             [ngbPopover]="servicesContent"
-            triggers="mouseenter:mouseleave click"
+            triggers="click"
             popoverClass="custom-services-popover"
             container="body"
-            (mouseenter)="openPopover(servicesPopover)"
-            (mouseleave)="scheduleClose(servicesPopover)"
+            placement="bottom"
+            (mouseenter)="!isMobile && openPopover(servicesPopover)"
+            (mouseleave)="!isMobile && scheduleClose(servicesPopover)"
             >Services</a
           >
         </li>
@@ -38,11 +35,11 @@
             routerLink="/schema-db/about"
             #aboutUsPopover="ngbPopover"
             [ngbPopover]="aboutUsContent"
-           triggers="mouseenter:mouseleave click"
+           triggers="click"
             popoverClass="custom-about-popover"
             container="body"
-            (mouseenter)="openPopover(aboutUsPopover)"
-            (mouseleave)="scheduleClose(aboutUsPopover)"
+            (mouseenter)="!isMobile && openPopover(aboutUsPopover)"
+            (mouseleave)="!isMobile && scheduleClose(aboutUsPopover)"
             >About US</a
           >
         </li>
@@ -51,12 +48,12 @@
             class="nav-link text-white"
             routerLink="/schema-db/explore"
             #popover="ngbPopover"
-            [ngbPopover]="exploreContent"
-            triggers="mouseenter:mouseleave click"
+            [ngbPopover]=" exploreContent"
+            triggers="click"
             popoverClass="custom-popover"
             container="body"
-            (mouseenter)="openPopover(popover)"
-            (mouseleave)="scheduleClose(popover)"
+            (mouseenter)="!isMobile && openPopover(popover)"
+            (mouseleave)="!isMobile && scheduleClose(popover)"
           >
             Explore
           </a>
@@ -84,7 +81,7 @@
     (mouseleave)="closePopover(popover)"
   >
     <ul class="list-unstyled">
-      <li><a routerLink="/schema-db/explore/blog">Blog</a></li>
+      <li><a routerLink="/schema-db/blog">Blog</a></li>
       <!-- <li><a routerLink="/schema-db/explore/case-studies">Case Studies</a></li> -->
     </ul>
   </div>

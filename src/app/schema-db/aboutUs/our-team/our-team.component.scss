@@ -86,7 +86,7 @@
 
 @media (max-width: 768px) {
   .team-hero {
-    padding: 70px 15px;
+    padding: 88px 15px;
   }
 }
 .team-hero h1 {
@@ -95,6 +95,26 @@
 
 .team-hero p {
   font-size: clamp(14px, 2.5vw, 18px);
+}
+
+/* CTA */
+.cta {
+  margin-top: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #00fdff;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
 }
 
 

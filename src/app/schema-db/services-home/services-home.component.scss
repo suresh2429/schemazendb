@@ -1,6 +1,5 @@
 .services-main-container {
-  height: 60px !important;
-  width: fit-content !important;
+  width: 100%;
 }
 
 .main-container {
@@ -35,9 +34,9 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 0 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
 }
 
 /* CARD */
@@ -110,6 +109,43 @@
   transform: scale(1.05);
 }
 
-.services-image{
-      height: 45vh !important;
+.services-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: clamp(24px, 5vw, 42px);
+}
+
+.services-heading {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+.services-description {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .services-description {
+    font-size: 16px;
+  }
+}
+
+.cta h2 {
+  font-size: clamp(20px, 4vw, 32px);
+}
+
+@media (max-width: 768px) {
+  .services-page {
+    padding-top: 80px;
+  }
+
+  .hero {
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
 }

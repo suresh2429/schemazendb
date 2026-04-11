@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-db-trainings',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './db-trainings.component.html',
   styleUrl: './db-trainings.component.scss'
 })
