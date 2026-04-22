@@ -2,6 +2,23 @@
   background: linear-gradient(135deg, #0a0a12, #101020);
   color: white;
   padding: 80px 20px;
+  background: url('/assets/db-trainings-1.jpg') center/cover no-repeat;
+}
+
+.service-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  filter:blur(5px);
+
+
+  z-index: 1;
+}
+
+.service-page > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* HERO */
