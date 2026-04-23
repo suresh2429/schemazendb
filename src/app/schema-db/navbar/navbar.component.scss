@@ -3,6 +3,10 @@
   min-height: 75px;
 }
 nav {
+  position: fixed;
+  top: 0;
+  width: 99%;
+  z-index: 999;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #a79f9f;
   background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1c1c3c);
