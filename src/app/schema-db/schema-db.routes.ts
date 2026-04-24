@@ -104,4 +104,22 @@ export const schemaDBRoutes: Routes = [
     import('./services-home/db-performance-health-audit/db-performance-health-audit.component')
       .then(m => m.DbPerformanceHealthAuditComponent)
 },
+{
+  path: 'blog/blog-1',
+  loadComponent: () =>
+    import('./explore/blog-1/blog-1.component')
+      .then(m => m.Blog1Component)
+},
+{
+  path: 'blog/blog-2',
+  loadComponent: () =>
+    import('./explore/blog-2/blog-2.component')
+      .then(m => m.Blog2Component)
+},
+{
+  path: 'blog/blog-3',
+  loadComponent: () =>
+    import('./explore/blog-3/blog-3.component')
+      .then(m => m.Blog3Component)
+},
 ];
