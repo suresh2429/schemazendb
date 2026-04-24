@@ -73,27 +73,27 @@ export class NavbarComponent {
 
   services = [
     {
-      id: 'service/db-support',
-      name: 'Database Support',
-      description: '24/7 monitoring, troubleshooting, and database health.',
+      id: 'service/managed-db-services',
+      name: 'Managed Database Services',
+      description: '24x7 monitoring, maintenance, and optimization to keep your databases secure, high-performing, and always available—without the need for an in-house DBA team.',
       image: 'assets/home_page_img.png',
     },
     {
       id: 'service/consulting',
-      name: 'Consulting',
-      description: 'Architecture design and performance consulting.',
+      name: 'Database Consulting & Architecture',
+      description: 'Expert guidance to design scalable, high-performance database systems. We help youoptimize architecture, improve efficiency, and align your data platform with business goals.',
       image: 'assets/home_page_img.png',
     },
     {
       id: 'service/cloud-db',
-      name: 'Cloud Database Management',
-      description: 'AWS, Azure, GCP database management.',
+      name: 'Cloud &Hybrid Database Management',
+      description: 'End-to-end management of databases across cloud and hybrid environments, ensuring scalability, performance, security, and cost optimization.',
       image: 'assets/home_page_img.png',
     },
     {
       id: 'service/db-migration',
-      name: 'Database Migrations',
-      description: 'Seamless migration with zero downtime.',
+      name: 'Database Migration & Upgrades',
+      description: 'Seamless database migrations and upgrades with minimal downtime, ensuring data integrity, improved performance, and a smooth transition to modern platforms.',
       image: 'assets/home_page_img.png',
     },
     {
@@ -103,11 +103,18 @@ export class NavbarComponent {
       image: 'assets/home_page_img.png',
     },
     {
-      id: 'service/it-contract-supply',
-      name: 'IT Contract Supply',
+      id: 'service/dba-staffing-aug',
+      name: 'DBA Staffing & Augmentation',
       description: 'Seamless migration with zero downtime.',
       image: 'assets/home_page_img.png',
     },
+     {
+      id: 'service/db-performance-health-audit',
+      name: 'Database Performance Tuning & Health Audit',
+      description: 'Seamless migration with zero downtime.',
+      image: 'assets/home_page_img.png',
+    },
+    
   ];
 
   activeService = this.services[0];

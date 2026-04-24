@@ -109,9 +109,9 @@ body {
 /* SMALL SCREENS */
 @media (max-width: 991px) {
   ::ng-deep .custom-services-popover .popover {
-    max-width: 97vw !important;
+    max-width: 90vw !important;
     width: 90vw;
-    left: 5vw !important;
+    left: 10vw !important;
   }
 
   .mega-menu {

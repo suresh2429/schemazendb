@@ -62,9 +62,9 @@ export const schemaDBRoutes: Routes = [
   //     ),
   // },
   {
-  path: 'service/db-support',
+  path: 'service/managed-db-services',
   loadComponent: () =>
-    import('./services-home/db-support/db-support.component')
+    import('./services-home/managed-db-services/managed-db-services')
       .then(m => m.DbSupportComponent)
 },
   {
@@ -86,9 +86,9 @@ export const schemaDBRoutes: Routes = [
       .then(m => m.DbMigrationComponent)
 },
 {
-  path: 'service/it-contract-supply',
+  path: 'service/dba-staffing-aug',
   loadComponent: () =>
-    import('./services-home/it-contract-supply/it-contract-supply.component')
+    import('./services-home/dba-staffing-aug/dba-staffing-aug')
       .then(m => m.ItContractSupplyComponent)
 },
 
@@ -98,5 +98,10 @@ export const schemaDBRoutes: Routes = [
     import('./services-home/db-trainings/db-trainings.component')
       .then(m => m.DbTrainingsComponent)
 },
-
+{
+  path: 'service/db-performance-health-audit',
+  loadComponent: () =>
+    import('./services-home/db-performance-health-audit/db-performance-health-audit.component')
+      .then(m => m.DbPerformanceHealthAuditComponent)
+},
 ];
