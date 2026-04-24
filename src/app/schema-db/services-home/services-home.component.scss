@@ -34,20 +34,22 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(391px, 1fr));
+  // gap: 38px;
   padding: 0 15px;
 }
 
 /* CARD */
 
-.service-card {
-  background: rgba(20, 20, 30, 0.6);
-  backdrop-filter: blur(14px);
-  border-radius: 12px;
-  padding: 30px;
-  transition: 0.3s;
-  border: 1px solid transparent;
+.service-card[_ngcontent-ng-c1454619678] {
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(14px);
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    width: 28rem;
+    margin-bottom: 20px;
 }
 
 .service-card:hover {

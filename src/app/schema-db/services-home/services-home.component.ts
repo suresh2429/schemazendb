@@ -14,45 +14,45 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 export class ServicesHomeComponent {
   services = [
     {
-      id:'db-support',
-      title: 'Database Support',
+      id:'managed-db-services',
+      title: 'Managed Database Services',
       description:
-        '24/7 monitoring, proactive health checks, troubleshooting and optimization.',
+        '24x7 monitoring, maintenance, and optimization to keep your databases secure, high-performing, and always available—without the need for an in-house DBA team.',
       icon: 'bi-database',
     },
     {
       id:'db-trainings',
       title: 'Database Trainings',
       description:
-        'End-to-end database administration handled by certified experts.',
+        'Practical, hands-on database training programs designed to build strong administration, performance tuning, and operational skills. We focus on real-world scenarios and best practices to help teams effectively manage and optimize database environments.',
       icon: 'bi-gear',
     },
     {
       id:'cloud-db',
-      title: 'Cloud Database Management',
+      title: 'Cloud & Hybrid Database Management',
       description:
-        'AWS, Azure, GCP database deployment, scaling, and optimization.',
+        'End-to-end management of databases across cloud and hybrid environments, ensuring scalability, performance, security, and cost optimization.',
       icon: 'bi-cloud',
     },
     {
       id:'db-migration',
-      title: 'Database Migration',
+      title: 'Database Migration & Upgrades',
       description:
-        'Secure, zero-downtime migration across platforms and environments.',
+        'Seamless database migrations and upgrades with minimal downtime, ensuring data integrity, improved performance, and a smooth transition to modern platforms.',
       icon: 'bi-arrow-left-right',
     },
     {
       id:'consulting',
-      title: 'Consulting Services',
+      title: 'Database Consulting & Architecture',
       description:
-        'Data pipelines, ETL workflows, and real-time processing solutions.',
+        'Expert guidance to design scalable, high-performance database systems. We help you optimize architecture, improve efficiency, and align your data platform with business goals.',
       icon: 'bi-diagram-3',
     },
      {
-      id:'it-contract-supply',
-      title: 'IT Contract Supply',
+      id:'dba-staffing-aug',
+      title: 'DBA Staffing & Augmentation',
       description:
-        'Data pipelines, ETL workflows, and real-time processing solutions.',
+        'Flexible staffing solutions to provide experienced database professionals for contract and permanent roles. We align skilled DBA resources with your technical and operational requirements to support projects and ongoing operations.',
       icon: 'bi-diagram-3',
     },
   ];
