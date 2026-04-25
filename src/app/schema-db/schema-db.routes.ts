@@ -17,19 +17,19 @@ export const schemaDBRoutes: Routes = [
       ),
   },
   {
-    path: 'company-overview',
+    path: 'about',
     loadComponent: () =>
       import('./aboutUs/company-overview/company-overview.component').then(
         (m) => m.CompanyOverviewComponent,
       ),
   },
-  {
-    path: 'our-team',
-    loadComponent: () =>
-      import('./aboutUs/our-team/our-team.component').then(
-        (m) => m.OurTeamComponent,
-      ),
-  },
+  // {
+  //   path: 'our-team',
+  //   loadComponent: () =>
+  //     import('./aboutUs/our-team/our-team.component').then(
+  //       (m) => m.OurTeamComponent,
+  //     ),
+  // },
   {
     path: '',
     children: [

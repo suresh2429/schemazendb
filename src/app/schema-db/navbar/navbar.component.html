@@ -3,7 +3,7 @@
 >
   <div class="container-fluid px-3">
     <a class="navbar-brand" href="#">
-      <img src="assets/schemaDB_logo.png" alt="logo" class="logo-img" />
+      <img src="assets/schema-logo-latest.png" alt="logo" class="logo-img" />
     </a>
   <button
   class="navbar-toggler"
@@ -14,6 +14,14 @@
     </button>
     <div class="collapse navbar-collapse" id="zenDBNav" [ngbCollapse]="!isMenuOpen">
       <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+          <a
+            class="nav-link text-white"
+            routerLink="/schema-db/home"
+            
+            >Home</a
+          >
+        </li>
         <li class="nav-item">
           <a
             class="nav-link text-white"
@@ -33,13 +41,7 @@
           <a
             class="nav-link text-white"
             routerLink="/schema-db/about"
-            #aboutUsPopover="ngbPopover"
-            [ngbPopover]="aboutUsContent"
-           triggers="click"
-            popoverClass="custom-about-popover"
-            container="body"
-            (mouseenter)="!isMobile && openPopover(aboutUsPopover)"
-            (mouseleave)="!isMobile && scheduleClose(aboutUsPopover)"
+            
             >About US</a
           >
         </li>
@@ -87,7 +89,7 @@
   </div>
 </ng-template>
 
-<ng-template #aboutUsContent>
+<!-- <ng-template #aboutUsContent>
   <div
     class="popover-content"
     (mouseenter)="cancelClose()"
@@ -95,10 +97,10 @@
   >
     <ul class="list-unstyled">
       <li><a routerLink="/schema-db/company-overview">Company Overview</a></li>
-      <!-- <li><a routerLink="/schema-db/our-team">Our Team</a></li> -->
+      <li><a routerLink="/schema-db/our-team">Our Team</a></li>
     </ul>
   </div>
-</ng-template>
+</ng-template> -->
 
 <ng-template #servicesContent>
   <div
