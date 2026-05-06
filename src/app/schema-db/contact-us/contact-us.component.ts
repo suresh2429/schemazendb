@@ -21,7 +21,8 @@ export class ContactUsComponent {
   userName: string = '';
   userEmail: string = '';
   userMessage: string = '';
-
+  country:string='';
+  phoneNum:number=0;
 constructor(private http: HttpClient) {}
 
 sendMessage() {
@@ -35,7 +36,7 @@ sendMessage() {
     message: this.userMessage
   };
 
- this.http.post('http://localhost:3000/api/contact/send', payload)
+ this.http.post('https://schemazendb-api.onrender.com/api/contact-us', payload)
   .subscribe({
     next: (res: any) => {
       alert("Message sent successfully ✅");
