@@ -17,12 +17,14 @@ nav {
 }
 
 .logo-img {
-  height: 66px;
-  // border-radius: 6px;
+  height: 60px;        /* control size */
+  width: auto;         /* keep aspect ratio */
+  object-fit: contain; /* prevent distortion */
+  display: block;
 }
 
 .logo-img {
-  height: clamp(40px, 6vw, 66px);
+  height: clamp(40px, 6vw, 80px);
 }
 
 @media (max-width: 991px) {
@@ -156,4 +158,8 @@ body {
   .mega-menu {
     font-size: 14px;
   }
+}
+
+img {
+  mix-blend-mode: lighten;
 }

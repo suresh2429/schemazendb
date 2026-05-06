@@ -11,8 +11,9 @@ import { FooterComponent } from "./schema-db/footer/footer.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  constructor(private router: Router) {}
   title = 'schemaDBUI';
+
+  constructor(private router: Router) {}
 
   isContactPage(): boolean {
   return this.router.url.includes('/schema-db/contact');

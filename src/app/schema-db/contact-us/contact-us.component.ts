@@ -35,23 +35,15 @@ sendMessage() {
     message: this.userMessage
   };
 
-  this.http.post('http://localhost:8080/api/contact/send', payload)
-    .subscribe({
-      next: () => {
-        alert(
-          'Message sent! Thank you ' + this.userName +
-          '. We will contact you at ' + this.userEmail
-        );
-
-        // clear form
-        this.userName = '';
-        this.userEmail = '';
-        this.userMessage = '';
-      },
-      error: (err:any) => {
-        console.error(err);
-        alert('Failed to send message ❌');
-      }
-    });
+ this.http.post('http://localhost:3000/api/contact/send', payload)
+  .subscribe({
+    next: (res: any) => {
+      alert("Message sent successfully ✅");
+    },
+    error: (err) => {
+      console.error(err);
+      alert("Failed ❌");
+    }
+  });
 }
 }

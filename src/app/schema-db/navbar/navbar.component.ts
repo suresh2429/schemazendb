@@ -13,6 +13,16 @@ import { NgbCollapseModule, NgbPopover, NgbPopoverModule } from '@ng-bootstrap/n
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+constructor(private router: Router) {
+  this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd) {
+      this.closeMenu();
+
+      // ✅ scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+}
   private timeout: any;
   private activePopover: NgbPopover | null = null;
   isMenuOpen = false;
@@ -135,4 +145,34 @@ export class NavbarComponent {
   toggleExplore() {
     this.showExplore = !this.showExplore;
   }
+closeMenu() {
+  this.isMenuOpen = false;
+
+  if (this.activePopover) {
+    this.activePopover.close();
+    this.activePopover = null;
+  }
+
+  // delay reset slightly (prevents race condition)
+  setTimeout(() => {
+    this.showServices = false;
+    this.showAboutUs = false;
+    this.showExplore = false;
+  }, 100);
+}
+handleMobileServicesClick(event: Event) {
+  event.stopPropagation(); // prevent unwanted bubbling
+
+  // if menu is closed, open it first
+  if (!this.isMenuOpen) {
+    this.isMenuOpen = true;
+  }
+
+  // then toggle dropdown
+  this.showServices = !this.showServices;
+
+  // close others (optional but cleaner UX)
+  this.showExplore = false;
+  this.showAboutUs = false;
+}
 }
