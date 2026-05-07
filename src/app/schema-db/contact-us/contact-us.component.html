@@ -12,12 +12,13 @@ Get in touch with us to discuss your requirements and explore the right solution
             <h6 class="mt-1">Name:</h6>
           </div>
           <div class="col-md-8 col-12 ps-0">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="your name"
-              [(ngModel)]="userName"
-            />
+           <input
+  type="text"
+  class="form-control"
+  placeholder="your name"
+  [(ngModel)]="userName"
+  name="name"
+/>
           </div>
         </div>
         <div class="row mb-3">
@@ -30,6 +31,7 @@ Get in touch with us to discuss your requirements and explore the right solution
               class="form-control"
               placeholder="youremail@gmail.com"
               [(ngModel)]="userEmail"
+              name="email"
             />
           </div>
         </div>
@@ -43,6 +45,7 @@ Get in touch with us to discuss your requirements and explore the right solution
               class="form-control"
               placeholder="Enter your mobile number"
               [(ngModel)]="phoneNum"
+              name="mobile"
             />
           </div>
         </div>
@@ -56,6 +59,7 @@ Get in touch with us to discuss your requirements and explore the right solution
               class="form-control"
               placeholder="Enter Your Country"
               [(ngModel)]="country"
+              name="country"
             />
           </div>
         </div>
@@ -69,6 +73,7 @@ Get in touch with us to discuss your requirements and explore the right solution
               rows="3"
               placeholder="your message here"
               [(ngModel)]="userMessage"
+              name="message"
             ></textarea>
           </div>
         </div>
