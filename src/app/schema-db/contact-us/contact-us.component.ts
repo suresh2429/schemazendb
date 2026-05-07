@@ -34,7 +34,9 @@ sendMessage() {
   const payload = {
     email: this.userEmail,
     message: this.userMessage,
-    name: this.userName
+    name: this.userName,
+    country:this.country,
+    mobile:this.phoneNum
   };
 
  this.http.post('https://schemazendb-api.onrender.com/api/contact-us', payload)
