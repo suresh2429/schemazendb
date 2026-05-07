@@ -22,7 +22,7 @@ export class ContactUsComponent {
   userEmail: string = '';
   userMessage: string = '';
   country:string='';
-  phoneNum:number=0;
+  phoneNum:string='';
 constructor(private http: HttpClient) {}
 
 sendMessage() {
@@ -33,7 +33,8 @@ sendMessage() {
 
   const payload = {
     email: this.userEmail,
-    message: this.userMessage
+    message: this.userMessage,
+    name: this.userName
   };
 
  this.http.post('https://schemazendb-api.onrender.com/api/contact-us', payload)
