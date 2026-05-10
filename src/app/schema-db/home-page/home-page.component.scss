@@ -29,6 +29,7 @@
 .technologies-bg {
   background-color: azure !important;
   height: 120px !important;
+  overflow: hidden;
   .technology-logo {
     transform: translateX();
   }
