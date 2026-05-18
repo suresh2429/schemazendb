@@ -25,6 +25,7 @@ nav {
 
 .logo-img {
   height: clamp(40px, 6vw, 80px);
+  transform: scale(2.5);
 }
 
 @media (max-width: 991px) {
@@ -162,4 +163,8 @@ body {
 
 img {
   mix-blend-mode: lighten;
+}
+
+.topnav-div{
+  padding-left:4rem !important;
 }
