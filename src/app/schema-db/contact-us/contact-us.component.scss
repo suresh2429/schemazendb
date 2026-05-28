@@ -1,5 +1,5 @@
 .required-field {
-  color: red;
+  color: #ff6b6b;
 }
 
 .contact-info {
@@ -7,61 +7,129 @@
     font-weight: 900;
     text-align: center;
     line-height: 1.6;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 5vw, 1.875rem);
+    color: #00fdff;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+  
+  p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    color: #ccc;
+    line-height: 1.8;
   }
 }
+
 .contact-card {
   width: 100%;
-  max-width: 420px;
-  margin: 6rem auto;
+  max-width: clamp(280px, 90vw, 420px);
+  margin: clamp(2rem, 5vw, 6rem) auto;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 0 1px rgba(255, 255, 255, 0.3);
-
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 0 1px rgba(255, 255, 255, 0.3);
   color: #fff;
+  transition: all 0.3s ease;
 }
+
 .contact-card:hover {
-  box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.35),
-    inset 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
 }
+
 .contact-card .form-control {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  transition: all 0.3s ease;
+  
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  &:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00fdff;
+    box-shadow: 0 0 8px rgba(0, 253, 255, 0.4);
+    color: #fff;
+  }
 }
 
-.contact-card .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact-card .form-control:focus {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #00fdff;
-  box-shadow: 0 0 8px rgba(0, 253, 255, 0.4);
-  color: #fff;
-}
 .contact-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #00fdff;
   color: #00fdff;
   font-weight: 500;
-}
-.contact-btn:hover {
-  background: linear-gradient(135deg, #00fdff, #6aebff);
-  color: #000;
+  padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: linear-gradient(135deg, #00fdff, #6aebff);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 253, 255, 0.3);
+  }
 }
 
 .contact-dets {
   color: #fff;
-  width: 32rem;
+  width: 100%;
+  max-width: clamp(250px, 90vw, 32rem);
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+  
+  p {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    margin-bottom: clamp(0.75rem, 1vw, 1rem);
+    line-height: 1.8;
+  }
 }
 
 hr {
-  background-color: aqua !important;
+  background-color: #00fdff !important;
+  opacity: 0.3;
+  margin: clamp(1rem, 2vw, 1.5rem) 0;
+}
+
+/* Form group responsive */
+.form-group {
+  margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+  
+  label {
+    font-size: clamp(0.8rem, 1.5vw, 0.875rem);
+    margin-bottom: clamp(0.4rem, 0.8vw, 0.5rem);
+    color: #ccc;
+  }
+}
+
+/* Responsive for tablets and mobile */
+@media (max-width: 768px) {
+  .contact-card {
+    margin: clamp(1.5rem, 3vw, 3rem) auto;
+  }
+  
+  .contact-dets {
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-card {
+    max-width: 100%;
+    margin: clamp(1rem, 2vw, 1.5rem) auto;
+    padding: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  
+  .contact-info h4 {
+    margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  }
 }

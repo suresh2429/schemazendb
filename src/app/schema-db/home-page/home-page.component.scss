@@ -2,6 +2,7 @@
   font-size: 3rem;
   line-height: 1.5;
 }
+
 .sub-info {
   font-size: 14px;
   line-height: 1.5;
@@ -11,6 +12,7 @@
 
 .img-fluid {
   height: 80px;
+  max-width: 100%;
 }
 
 .sub-text {
@@ -21,88 +23,141 @@
 }
 
 .main-page-img {
-  width: -webkit-fill-available;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 7%;
+  display: block;
 }
 
 .technologies-bg {
   background-color: azure !important;
   height: 120px !important;
   overflow: hidden;
+  width: 100%;
+
   .technology-logo {
     transform: translateX();
   }
 }
 
 .technology-logo {
-  width: 100px;
-  height: 100px;
+  width: clamp(60px, 10vw, 100px);
+  height: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .tech-scroll {
   display: flex;
   gap: 2rem;
   animation: scrollRight 8s linear infinite;
+  width: max-content;
+  min-width: 100%;
+  align-items: center;
 }
 
 @keyframes scrollRight {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(-100%);
   }
 }
+
 .contact-info {
   font-size: 12px;
   color: #fcfcfc;
 }
 
-@media (max-width: 768px) {
-  .main-container {
-    margin: 32px 10px;
-  }
-
-  .main-info {
-    text-align: center;
-  }
-
-  .sub-info {
-    text-align: center;
-  }
-
-  .sub-text {
-    text-align: center;
-  }
-}
-
-.technology-logo {
-  width: clamp(60px, 10vw, 100px);
-  height: auto;
-}
-
 .testi-card {
   max-width: 900px;
+  width: 100%;
   margin: auto;
 }
 
+/* =========================
+   RESPONSIVE FIXES ONLY
+   ========================= */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+/* Bootstrap row fix */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Prevent column overflow */
+[class*="col-"] {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent cards overflow */
+.card,
+.glass-card,
+.glass-card-tabs {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
 @media (max-width: 768px) {
+  .main-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-info,
+  .sub-info,
+  .sub-text {
+    text-align: center;
+  }
+
   .glass-card-tabs {
     margin-bottom: 20px;
   }
+
+  .main-page-img {
+    margin-top: 20px;
+  }
 }
 
-.main-page-img {
-  width: 100%;
-  height: auto;
-}
+/* =========================
+   MOBILE
+   ========================= */
 
-.main-info {
-  font-size: clamp(24px, 5vw, 3rem);
-}
+@media (max-width: 576px) {
+  .main-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 
-.sub-text {
-  font-size: clamp(22px, 4vw, 3rem);
+  .tech-scroll {
+    gap: 1rem;
+  }
+
+  .technologies-bg {
+    height: auto !important;
+    padding: 10px 0;
+  }
 }

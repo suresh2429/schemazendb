@@ -1,12 +1,39 @@
 .floating-contact-btn {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: clamp(1rem, 2vw, 1.5625rem);
+  right: clamp(1rem, 2vw, 1.5625rem);
   background: #00fdff;
   color: black;
-  padding: 12px 18px;
+  padding: clamp(0.6rem, 1.2vw, 0.75rem) clamp(1rem, 1.5vw, 1.125rem);
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  z-index: 9999; /* VERY IMPORTANT */
+  z-index: 999;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  box-shadow: 0 8px 20px rgba(0, 253, 255, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 253, 255, 0.4);
+    color: black;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 576px) {
+    bottom: clamp(0.75rem, 1.5vw, 1rem);
+    right: clamp(0.75rem, 1.5vw, 1rem);
+    width: clamp(40px, 10vw, 50px);
+    height: clamp(40px, 10vw, 50px);
+    padding: 0;
+    border-radius: 50%;
+    
+    span {
+      display: none;
+    }
+  }
 }
